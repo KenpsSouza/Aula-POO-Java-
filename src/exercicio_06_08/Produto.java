@@ -19,7 +19,8 @@ public class Produto {
 
     public void aplicarDesconto(double percentual) {
         if (percentual < 0) {
-            System.out.println("Percentual de desconto não pode ser realizado.");
+            System.out.println("Percentual de desconto não pode ser negativo.");
+            return;
         }
         double desconto = preco * (percentual / 100);
         setPreco(preco - desconto);
