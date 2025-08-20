@@ -1,0 +1,15 @@
+# Ignorar pastas de cópia criadas para estudo
+src/copia*/
+bin/copia*/
+
+# Ignorar arquivos de configuração do Eclipse
+.project
+.classpath
+.settings/
+
+# Ignorar arquivos compilados
+*.class
+
+# Ignorar arquivos temporários
+*.tmp
+*.temp
