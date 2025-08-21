@@ -15,7 +15,5 @@ public abstract class Veiculo {
         this.modelo = modelo;
     }
 
-    public double calcularTempo(double distancia) {
-      return 4;
-    }
+    public abstract float calcularTempo(float distancia);
 }

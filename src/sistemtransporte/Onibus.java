@@ -17,10 +17,10 @@ public class Onibus extends Veiculo {
     }
 
     @Override
-    public double calcularTempo(double distancia) {
-        double velocidadeMedia = 60.0; 
-        double tempoViagem = distancia / velocidadeMedia; 
-        double tempoParadas = numeroParadas * 0.25 ; 
+    public float calcularTempo(float distancia) {
+        float velocidadeMedia = 60.0f; 
+        float tempoViagem = distancia / velocidadeMedia; 
+        float tempoParadas = numeroParadas * 0.25f ; 
         return tempoViagem + tempoParadas;
     }
 }

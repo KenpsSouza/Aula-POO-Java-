@@ -36,7 +36,7 @@ public class Main {
             return;
         }
         
-        double tempo = veiculo.calcularTempo(distancia);
+        float tempo = veiculo.calcularTempo(distancia);
         int horas = (int) tempo;
         int minutos = (int) ((tempo - horas) * 60);
         
@@ -44,7 +44,8 @@ public class Main {
         System.out.println("Veículo: " + veiculo.getModelo());
         System.out.println("Distância: " + distancia + " km");
         System.out.println("Tempo estimado: " + horas + " h e " + minutos + " minutos");
-        
+        System.out.printf("Velocidade média: %.1f km/h%n", (distancia / tempo));
+   
         sc.close();
     }
 }
