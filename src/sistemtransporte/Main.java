@@ -37,10 +37,13 @@ public class Main {
         }
         
         double tempo = veiculo.calcularTempo(distancia);
+        int horas = (int) tempo;
+        int minutos = (int) ((tempo - horas) * 60);
+        
         System.out.println("=== RESULTADO ===");
         System.out.println("Veículo: " + veiculo.getModelo());
-        System.out.println("Distância: " + distancia + " km/h");
-        System.out.println("Tempo estimado:" + tempo * 60 + " minutos");
+        System.out.println("Distância: " + distancia + " km");
+        System.out.println("Tempo estimado: " + horas + " h e " + minutos + " minutos");
         
         sc.close();
     }
