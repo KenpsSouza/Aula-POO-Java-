@@ -20,37 +20,31 @@ public class Main {
             System.out.println("Digite o id da pessoa (ou 0 para sair):");
             int idProcurado = sc.nextInt();
             if (idProcurado == 0) break;
-
-            Pessoa pessoaEncontrada = null;
-
+            
+            
+            boolean achou = false;
             for (Pessoa p : cache) {
                 if (p.getId() == idProcurado) {
-                    pessoaEncontrada = p;
+                    System.out.println("A Pessoa foi encontrada no cache: \n" + p);
+                    achou = true;
                     break;
                 }
             }
-
-            if (pessoaEncontrada != null) {
-                System.out.println("Pessoa encontrada no cache: \n" + pessoaEncontrada);
-            } else {
+            if (!achou) {
                 for (Pessoa p : banco) {
                     if (p.getId() == idProcurado) {
-                        pessoaEncontrada = p;
+                        if (cache.size() >= 10) cache.remove(0);
+                        cache.add(p);
+                        System.out.println("A Pessoa foi buscada no banco e adicionada ao cache: \n" + p);
+                        achou = true;
                         break;
                     }
                 }
-                if (pessoaEncontrada != null) {
-                    if (cache.size() >= 10) {
-                        cache.remove(0);
-                    }
-                    cache.add(pessoaEncontrada);
-                    System.out.println("Pessoa buscada no banco e adicionada ao cache: \n" 
-                    + pessoaEncontrada);
-                } else {
-                    System.out.println("Pessoa não encontrada.");
+                if (!achou) {
+                    System.out.println("A Pessoa não foi encontrada.");
                 }
             }
-        }
-        sc.close();
     }
+        sc.close();
+}
 }
