@@ -9,8 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Livro livro = new Livro();
 
-        System.out.println("Olá, vamos a livraria!");
-        System.out.println();
+        System.out.println("Olá, bem-vindos à livraria!");
 
         System.out.print("Informe o nome do título: ");
         String titulo = sc.nextLine();
@@ -23,18 +22,15 @@ public class Main {
         System.out.print("Informe o número de páginas: ");
         int numPagina = sc.nextInt();
         livro.setNumPaginas(numPagina);
-
+;
         System.out.println();
         if (livro.getNumPaginas() >= 5) {
             System.out.println("Livro cadastrado com sucesso!");
             System.out.println(livro.getAutor());
             System.out.println(livro.getTitulo());
-            System.out.println(livro.getNumPaginas());
-
-            
-        } else {
+            System.out.println(livro.getNumPaginas());    
         }
-
+        
         sc.close();
     }
 }
