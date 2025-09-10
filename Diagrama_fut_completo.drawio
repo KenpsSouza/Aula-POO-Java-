@@ -1,0 +1,169 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36" version="28.2.0">
+  <diagram name="Sistema Futebol Completo" id="kPXiscaiGD-RqgebSL7I">
+    <mxGraphModel dx="1603" dy="935" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-30" value="&lt;&lt;abstract&gt;&gt;&#xa;Pessoa&#xa;------------------------&#xa;- nome: String&#xa;- idade: int&#xa;- cpf: String&#xa;- salario: double&#xa;------------------------&#xa;+ trabalhar(): void {abstract}&#xa;+ receberSalario(): void&#xa;+ getNome(): String&#xa;+ setNome(String): void&#xa;+ getIdade(): int&#xa;+ setIdade(int): void" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="495" width="200" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-31" value="&lt;&lt;abstract&gt;&gt;&#xa;Futebol&#xa;------------------------&#xa;- modalidade: String&#xa;- numeroJogadores: int&#xa;- duracaoPartida: int&#xa;- regras: String&#xa;------------------------&#xa;+ jogar(): void {abstract}&#xa;+ aplicarRegras(): void&#xa;+ iniciarPartida(): void&#xa;+ finalizarPartida(): void" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="200" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-32" value="Jogador&#xa;------------------------&#xa;- posicao: String&#xa;- numeroCamisa: int&#xa;- energia: int&#xa;- gols: int&#xa;------------------------&#xa;" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="75" y="800" width="130" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-33" value="Tecnico&#xa;------------------------&#xa;- experiencia: int&#xa;- formacao: String&#xa;- titulos: int&#xa;------------------------&#xa;" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="280" y="810" width="130" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-34" value="FutebolCampo&#xa;------------------------&#xa;- tipoCampo: String&#xa;- tamanhoGol: double&#xa;------------------------&#xa;" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-35" value="FutebolSociety&#xa;------------------------&#xa;- tipoQuadra: String&#xa;- tempoExtra: boolean&#xa;------------------------&#xa;" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="290" y="380" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-36" value="FutebolAreia&#xa;------------------------&#xa;- tipoPraia: String&#xa;- condicaoTempo: String&#xa;------------------------&#xa;" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="520" y="380" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-37" value="Goleiro&#xa;------------------------&#xa;- defesas: int&#xa;- golsSofridos: int&#xa;------------------------&#xa;+ defender(): void&#xa;+ cobrarTiroMeta(): void" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1010" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-38" value="Atacante&#xa;------------------------&#xa;- finalizacoes: int&#xa;- assistencias: int&#xa;------------------------&#xa;+ finalizar(): void&#xa;+ darAssistencia(): void" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1010" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-39" value="Time&#xa;------------------------&#xa;- nome: String&#xa;- cidade: String&#xa;- anoFundacao: int&#xa;- titulos: int&#xa;------------------------&#xa;+ adicionarJogador(): void&#xa;+ removerJogador(): void&#xa;+ escalarTime(): void&#xa;+ treinar(): void" style="swimlane;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="540" y="660" width="160" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-40" value="&lt;&lt;interface&gt;&gt;&#xa;Habilidades&#xa;------------------------&#xa;+ driblar(): void&#xa;+ passar(): void&#xa;+ cabecear(): void" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=35;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#e6f7ff;strokeColor=#1890ff;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="525" y="1010" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-41" value="&lt;&lt;interface&gt;&gt; &#xa;Equipamentos &#xa;------------------------ &#xa;+ verificarChuteiras(): void &#xa;+ trocarUniforme(): void &#xa;+ usarCaneleiras(): void" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=45;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#e6f7ff;strokeColor=#1890ff;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="290" y="610" width="160" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-42" value="&lt;&lt;interface&gt;&gt; &#xa;Gramado &#xa;------------------------ &#xa;+ cortarGrama(): void &#xa;+ verificarCondicao(): String &#xa;+ adubarGrama(): void" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;fillColor=#e6f7ff;strokeColor=#1890ff;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="280" y="120" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-43" style="endArrow=block;endFill=0;strokeWidth=2;strokeColor=#000000;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-36" target="ZM7ShwqGbd0Ynh3_03Bi-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="330" as="sourcePoint" />
+            <mxPoint x="60" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="350" />
+              <mxPoint x="140" y="350" />
+              <mxPoint x="140" y="320" />
+              <mxPoint x="140" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-44" style="endArrow=block;endFill=0;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-37" target="ZM7ShwqGbd0Ynh3_03Bi-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="570" as="sourcePoint" />
+            <mxPoint x="80" y="910" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-45" style="endArrow=block;endFill=0;strokeWidth=2;strokeColor=#000000;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-38" target="ZM7ShwqGbd0Ynh3_03Bi-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="575" as="sourcePoint" />
+            <mxPoint x="550" y="430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="980" />
+              <mxPoint x="140" y="980" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-46" style="endArrow=block;endFill=0;dashed=1;strokeColor=#ff6600;strokeWidth=3;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-38" target="ZM7ShwqGbd0Ynh3_03Bi-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-47" style="endArrow=block;endFill=0;dashed=1;strokeColor=#ff6600;strokeWidth=3;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-32" target="ZM7ShwqGbd0Ynh3_03Bi-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="205" y="750" />
+              <mxPoint x="370" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-48" style="endArrow=block;endFill=0;dashed=1;strokeColor=#ff6600;strokeWidth=3;exitX=0.954;exitY=-0.041;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-34" target="ZM7ShwqGbd0Ynh3_03Bi-42">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="357.5" as="sourcePoint" />
+            <mxPoint x="400" y="268" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="213" y="320" />
+              <mxPoint x="360" y="320" />
+              <mxPoint x="360" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-49" value="SISTEMA DE FUTEBOL - LEGENDA&lt;br&gt;&lt;br&gt;CLASSES:&lt;br&gt;í ½í¿¨ Abstratas: Pessoa, Futebol&lt;br&gt;í ½í¿ª Pessoas: Jogador, TÃ©cnico&lt;br&gt;í ½í¿¥ Modalidades: Campo, Society, Areia&lt;br&gt;í ½í¿¦ EspecializaÃ§Ãµes: Goleiro, Atacante&lt;br&gt;í ½í¿© Sistema: Time&lt;br&gt;í ½í¿¦ Interfaces: Gramado, Equipamentos e Habilidades&lt;br&gt;&lt;br&gt;RELACIONAMENTOS:&lt;br&gt;â¬› â”€â”€â”€â”€â–º HeranÃ§a&lt;br&gt;í ½í¿  - - - â–º ImplementaÃ§Ã£o&lt;br&gt;í ½í¿¢ â”€â”€â”€â”€â–º AssociaÃ§Ã£o&lt;br&gt;&lt;br&gt;INTERFACES SELETIVAS:&lt;br&gt;â€¢ Gramado: Campo (nÃ£o Areia, nÃ£o Society)&lt;br&gt;â€¢ Habilidades: Atacante (nÃ£o Goleiro)&lt;br&gt;â€¢ Equipamentos: Jogador&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;whiteSpace=wrap;rounded=1;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Courier New;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="520" y="20" width="260" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-49" target="ZM7ShwqGbd0Ynh3_03Bi-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-51" style="endArrow=block;endFill=0;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-32" target="ZM7ShwqGbd0Ynh3_03Bi-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="330" as="sourcePoint" />
+            <mxPoint x="520" y="290" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-52" style="endArrow=block;endFill=0;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-33" target="ZM7ShwqGbd0Ynh3_03Bi-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="460" as="sourcePoint" />
+            <mxPoint x="120" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="345" y="780" />
+              <mxPoint x="140" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-53" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#60a917;strokeColor=#2D7600;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-32" target="ZM7ShwqGbd0Ynh3_03Bi-39">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="330" as="sourcePoint" />
+            <mxPoint x="590" y="750" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="173" y="920" />
+              <mxPoint x="205" y="920" />
+              <mxPoint x="430" y="920" />
+              <mxPoint x="500" y="920" />
+              <mxPoint x="500" y="750" />
+              <mxPoint x="540" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-54" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#60a917;strokeColor=#2D7600;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-33" target="ZM7ShwqGbd0Ynh3_03Bi-39">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="377.5" y="900" as="sourcePoint" />
+            <mxPoint x="600" y="750" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="378" y="920" />
+              <mxPoint x="430" y="920" />
+              <mxPoint x="500" y="920" />
+              <mxPoint x="500" y="750" />
+              <mxPoint x="540" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-55" style="endArrow=block;endFill=0;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-34" target="ZM7ShwqGbd0Ynh3_03Bi-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="159.5" y="278" as="sourcePoint" />
+            <mxPoint x="90" y="220" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZM7ShwqGbd0Ynh3_03Bi-56" style="endArrow=block;endFill=0;strokeWidth=2;strokeColor=#000000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="ZM7ShwqGbd0Ynh3_03Bi-35" target="ZM7ShwqGbd0Ynh3_03Bi-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90.00000000000011" y="380.90999999999997" as="sourcePoint" />
+            <mxPoint x="110" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="350" />
+              <mxPoint x="140" y="350" />
+              <mxPoint x="140" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
